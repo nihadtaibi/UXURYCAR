@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter une voiture</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f9; padding: 40px; }
+        .form-container { max-width: 500px; background: white; padding: 30px; margin: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #333; }
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        input, select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; margin-top: 20px; padding: 12px; background: #e63946; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+        button:hover { background: #d62839; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Ajouter une nouvelle voiture</h2>
+    <form action="/ajouter-voiture" method="POST">
+        <label>Nom de la voiture (مثلاً: Renault Kardian):</label>
+        <input type="text" name="nom" required placeholder="Ex: Renault Kardian">
+
+        <label>Prix par jour (DH):</label>
+        <input type="number" step="0.1" name="prix" required placeholder="Ex: 450">
+
+        <label>Carburant:</label>
+        <select name="carburant">
+            <option value="Diesel">Diesel</option>
+            <option value="Essence">Essence</option>
+            <option value="Hybride">Hybride</option>
+        </select>
+
+        <label>Boîte de vitesse:</label>
+        <select name="boite">
+            <option value="Manuelle">Manuelle</option>
+            <option value="Automatique">Automatique</option>
+        </select>
+
+        <label>Nombre de places:</label>
+        <input type="number" name="places" value="5" required>
+
+        <label>Nom de l'image (فـ static):</label>
+        <input type="text" name="image" required placeholder="Ex: kardian.jpg">
+
+        <button type="submit">Ajouter la voiture</button>
+    </form>
+</div>
+
+</body>
+</html>
